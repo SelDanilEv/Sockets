@@ -1,5 +1,3 @@
-#include "Shared.h"
-
 class SocketAddress
 {
 public:

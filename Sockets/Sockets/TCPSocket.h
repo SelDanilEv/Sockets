@@ -1,6 +1,3 @@
-#include "Shared.h"
-#include "SocketAddress.h"
-
 class TCPSocket
 {
 public:
