@@ -1,6 +1,7 @@
 #include "stdint.h"
+#define WIN32_LEAN_AND_MEAN
 #include "Windows.h"
-#include "WinSock2.h"
+#include <WinSock2.h>
 #include "Ws2tcpip.h"
 #include <iostream>
 
@@ -8,6 +9,7 @@
 
 #include "vector"
 #include "string"
+
 
 using std::vector;
 using std::string;

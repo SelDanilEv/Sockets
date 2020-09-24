@@ -5,7 +5,7 @@ int TCPSocket::Connect(const SocketAddress& inAddress)
     int err = connect(mSocket, &inAddress.mSockAddr, inAddress.GetSize());
     if (err < 0)
     {
-        SocketUtil::ReportError("TCPSocket::Connect");
+        //SocketUtil::ReportError("TCPSocket::Connect");
         return -SocketUtil::GetLastError();
     }
     return NO_ERROR;
@@ -15,7 +15,7 @@ int TCPSocket::Listen(int inBackLog)
     int err = listen(mSocket, inBackLog);
     if (err < 0)
     {
-        SocketUtil::ReportError("TCPSocket::Listen");
+        //SocketUtil::ReportError("TCPSocket::Listen");
         return -SocketUtil::GetLastError();
     }
     // ???Сокеты TCP  105
@@ -31,7 +31,7 @@ TCPSocketPtr TCPSocket::Accept(SocketAddress& inFromAddress)
     }
     else
     {
-        SocketUtil::ReportError("TCPSocket::Accept");
+        //SocketUtil::ReportError("TCPSocket::Accept");
         return nullptr;
     }
 }
@@ -42,7 +42,7 @@ int TCPSocket::Send(const void* inData, int inLen)
         inLen, 0);
     if (bytesSentCount < 0)
     {
-        SocketUtil::ReportError("TCPSocket::Send");
+        //SocketUtil::ReportError("TCPSocket::Send");
         return -SocketUtil::GetLastError();
     }
     return bytesSentCount;
@@ -53,7 +53,7 @@ int TCPSocket::Receive(void* inData, int inLen)
         static_cast<char*>(inData), inLen, 0);
     if (bytesReceivedCount < 0)
     {
-        SocketUtil::ReportError("TCPSocket::Receive");
+        //SocketUtil::ReportError("TCPSocket::Receive");
         return -SocketUtil::GetLastError();
     }
     return bytesReceivedCount;

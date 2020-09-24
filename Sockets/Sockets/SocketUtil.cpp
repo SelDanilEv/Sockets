@@ -7,7 +7,7 @@ bool SocketUtil::StaticInit()
 	int iResult = WSAStartup(MAKEWORD(2, 2), &wsaData);
 	if (iResult != NO_ERROR)
 	{
-		ReportError("Starting Up");
+		//ReportError("Starting Up");
 		return false;
 	}
 #endif
@@ -22,28 +22,28 @@ void SocketUtil::CleanUp()
 }
 
 
-void SocketUtil::ReportError(const char* inOperationDesc)
-{
-#if _WIN32
-	LPVOID lpMsgBuf;
-	DWORD errorNum = GetLastError();
-
-	FormatMessage(
-		FORMAT_MESSAGE_ALLOCATE_BUFFER |
-		FORMAT_MESSAGE_FROM_SYSTEM |
-		FORMAT_MESSAGE_IGNORE_INSERTS,
-		NULL,
-		errorNum,
-		MAKELANGID(LANG_NEUTRAL, SUBLANG_DEFAULT),
-		(LPTSTR)&lpMsgBuf,
-		0, NULL);
-
-	// TODO: Danil - there is StringUtils require
-	//LOG("Error %s: %d- %s", inOperationDesc, errorNum, lpMsgBuf);
-#else
-	LOG("Error: %hs", inOperationDesc);
-#endif
-}
+//void SocketUtil::ReportError(const char* inOperationDesc)
+//{
+//#if _WIN32
+//	LPVOID lpMsgBuf;
+//	DWORD errorNum = GetLastError();
+//
+//	FormatMessage(
+//		FORMAT_MESSAGE_ALLOCATE_BUFFER |
+//		FORMAT_MESSAGE_FROM_SYSTEM |
+//		FORMAT_MESSAGE_IGNORE_INSERTS,
+//		NULL,
+//		errorNum,
+//		MAKELANGID(LANG_NEUTRAL, SUBLANG_DEFAULT),
+//		(LPTSTR)&lpMsgBuf,
+//		0, NULL);
+//
+//	// TODO: Danil - there is StringUtils require
+//	//LOG("Error %s: %d- %s", inOperationDesc, errorNum, lpMsgBuf);
+//#else
+//	LOG("Error: %hs", inOperationDesc);
+//#endif
+//}
 
 int SocketUtil::GetLastError()
 {
@@ -65,7 +65,7 @@ UDPSocketPtr SocketUtil::CreateUDPSocket(SocketAddressFamily inFamily)
 	}
 	else
 	{
-		ReportError("SocketUtil::CreateUDPSocket");
+		//ReportError("SocketUtil::CreateUDPSocket");
 		return nullptr;
 	}
 }
@@ -80,7 +80,7 @@ TCPSocketPtr SocketUtil::CreateTCPSocket(SocketAddressFamily inFamily)
 	}
 	else
 	{
-		ReportError("SocketUtil::CreateTCPSocket");
+		//ReportError("SocketUtil::CreateTCPSocket");
 		return nullptr;
 	}
 }

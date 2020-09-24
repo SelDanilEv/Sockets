@@ -22,4 +22,4 @@ private:
 
 };
 
-typedef shared_ptr< UDPSocket >	UDPSocketPtr;
+typedef std::shared_ptr< UDPSocket >	UDPSocketPtr;
