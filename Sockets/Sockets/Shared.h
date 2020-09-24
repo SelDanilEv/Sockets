@@ -13,8 +13,11 @@
 
 using std::vector;
 using std::string;
+using std::shared_ptr;
 
 #include "SocketAddress.h"
 #include "TCPSocket.h"
 #include "SocketUtil.h"
 #include "UDPSocket.h"
+
+#pragma comment(lib,"WS2_32")

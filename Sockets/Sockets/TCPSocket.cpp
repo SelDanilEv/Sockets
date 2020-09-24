@@ -10,6 +10,19 @@ int TCPSocket::Connect(const SocketAddress& inAddress)
     }
     return NO_ERROR;
 }
+
+int TCPSocket::Bind(const SocketAddress& inBindAddress)
+{
+    int error = bind(mSocket, &inBindAddress.mSockAddr, inBindAddress.GetSize());
+    if (error != 0)
+    {
+        //SocketUtil::ReportError("TCPSocket::Bind");
+        return SocketUtil::GetLastError();
+    }
+
+    return NO_ERROR;
+}
+
 int TCPSocket::Listen(int inBackLog)
 {
     int err = listen(mSocket, inBackLog);

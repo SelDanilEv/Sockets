@@ -21,4 +21,4 @@ private:
     }
 };
 
-typedef std::shared_ptr<SocketAddress> SocketAddressPtr;
+typedef shared_ptr<SocketAddress> SocketAddressPtr;

@@ -1,30 +1,5 @@
-﻿  SocketAddress.cpp
-D:\ToParse\Danil\university\ПБСП\Games\OurTryes\Sockets\Sockets\SocketUtil.h(24,37): error C3646: CreateUDPSocket: неизвестный спецификатор переопределения
-D:\ToParse\Danil\university\ПБСП\Games\OurTryes\Sockets\Sockets\SocketUtil.h(24,38): error C2275: SocketAddressFamily: недопустимое использование этого типа в качестве выражения
-D:\ToParse\Danil\university\ПБСП\Games\OurTryes\Sockets\Sockets\SocketUtil.h(1): message : см. объявление "SocketAddressFamily"
-D:\ToParse\Danil\university\ПБСП\Games\OurTryes\Sockets\Sockets\SocketUtil.h(24,58): error C2146: синтаксическая ошибка: отсутствие ")" перед идентификатором "inFamily"
-D:\ToParse\Danil\university\ПБСП\Games\OurTryes\Sockets\Sockets\SocketUtil.h(24,67): error C2238: непредвиденные лексемы перед ";"
-  SocketUtil.cpp
-D:\ToParse\Danil\university\ПБСП\Games\OurTryes\Sockets\Sockets\SocketUtil.h(24,37): error C3646: CreateUDPSocket: неизвестный спецификатор переопределения
-D:\ToParse\Danil\university\ПБСП\Games\OurTryes\Sockets\Sockets\SocketUtil.h(24,38): error C2275: SocketAddressFamily: недопустимое использование этого типа в качестве выражения
-D:\ToParse\Danil\university\ПБСП\Games\OurTryes\Sockets\Sockets\SocketUtil.h(1): message : см. объявление "SocketAddressFamily"
-D:\ToParse\Danil\university\ПБСП\Games\OurTryes\Sockets\Sockets\SocketUtil.h(24,58): error C2146: синтаксическая ошибка: отсутствие ")" перед идентификатором "inFamily"
-D:\ToParse\Danil\university\ПБСП\Games\OurTryes\Sockets\Sockets\SocketUtil.h(24,67): error C2238: непредвиденные лексемы перед ";"
-D:\ToParse\Danil\university\ПБСП\Games\OurTryes\Sockets\Sockets\SocketUtil.cpp(58,26): error C2039: "CreateUDPSocket": не является членом "SocketUtil".
-D:\ToParse\Danil\university\ПБСП\Games\OurTryes\Sockets\Sockets\SocketUtil.h(7): message : см. объявление "SocketUtil"
-D:\ToParse\Danil\university\ПБСП\Games\OurTryes\Sockets\Sockets\SocketUtil.cpp(64,39): error C2248: UDPSocket::UDPSocket: невозможно обратиться к private член, объявленному в классе "UDPSocket"
-D:\ToParse\Danil\university\ПБСП\Games\OurTryes\Sockets\Sockets\UDPSocket.h(20): message : см. объявление "UDPSocket::UDPSocket"
-D:\ToParse\Danil\university\ПБСП\Games\OurTryes\Sockets\Sockets\UDPSocket.h(1): message : см. объявление "UDPSocket"
+﻿  SocketUtil.cpp
   TCPSocket.cpp
-D:\ToParse\Danil\university\ПБСП\Games\OurTryes\Sockets\Sockets\SocketUtil.h(24,37): error C3646: CreateUDPSocket: неизвестный спецификатор переопределения
-D:\ToParse\Danil\university\ПБСП\Games\OurTryes\Sockets\Sockets\SocketUtil.h(24,38): error C2275: SocketAddressFamily: недопустимое использование этого типа в качестве выражения
-D:\ToParse\Danil\university\ПБСП\Games\OurTryes\Sockets\Sockets\SocketUtil.h(1): message : см. объявление "SocketAddressFamily"
-D:\ToParse\Danil\university\ПБСП\Games\OurTryes\Sockets\Sockets\SocketUtil.h(24,58): error C2146: синтаксическая ошибка: отсутствие ")" перед идентификатором "inFamily"
-D:\ToParse\Danil\university\ПБСП\Games\OurTryes\Sockets\Sockets\SocketUtil.h(24,67): error C2238: непредвиденные лексемы перед ";"
   UDPSocket.cpp
-D:\ToParse\Danil\university\ПБСП\Games\OurTryes\Sockets\Sockets\SocketUtil.h(24,37): error C3646: CreateUDPSocket: неизвестный спецификатор переопределения
-D:\ToParse\Danil\university\ПБСП\Games\OurTryes\Sockets\Sockets\SocketUtil.h(24,38): error C2275: SocketAddressFamily: недопустимое использование этого типа в качестве выражения
-D:\ToParse\Danil\university\ПБСП\Games\OurTryes\Sockets\Sockets\SocketUtil.h(1): message : см. объявление "SocketAddressFamily"
-D:\ToParse\Danil\university\ПБСП\Games\OurTryes\Sockets\Sockets\SocketUtil.h(24,58): error C2146: синтаксическая ошибка: отсутствие ")" перед идентификатором "inFamily"
-D:\ToParse\Danil\university\ПБСП\Games\OurTryes\Sockets\Sockets\SocketUtil.h(24,67): error C2238: непредвиденные лексемы перед ";"
   Создание кода...
+  Sockets.vcxproj -> D:\ToParse\Danil\university\ПБСП\Games\OurTryes\Sockets\Debug\Sockets.exe

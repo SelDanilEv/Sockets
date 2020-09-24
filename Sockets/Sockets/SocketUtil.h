@@ -7,7 +7,6 @@ enum SocketAddressFamily
 class SocketUtil
 {
 public:
-
 	static bool			StaticInit();
 	static void			CleanUp();
 
@@ -21,7 +20,7 @@ public:
 		const vector< TCPSocketPtr >* inExceptSet,
 		vector< TCPSocketPtr >* outExceptSet);
 
-	static UDPSocketPtr	CreateUDPSocket(SocketAddressFamily inFamily);
+	//static UDPSocketPtr	CreateUDPSocket(SocketAddressFamily inFamily);
 	static TCPSocketPtr	CreateTCPSocket(SocketAddressFamily inFamily);
 
 private:
