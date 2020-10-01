@@ -16,9 +16,16 @@ int main()
 
     serverSocket->Accept(*inAddress);
 
+    char sibuf[50],
+        sobuf[50] = "sever: �������";
+
+    serverSocket->Receive(sibuf, sizeof(sibuf));
+    std::cout << sibuf;
+    serverSocket->Send(sobuf, sizeof(sobuf));
+
     //client
     TCPSocketPtr clientSocket = SocketUtil::CreateTCPSocket(SocketAddressFamily::INET);
-
+    
     clientSocket->Connect(*inAddress);
 
     char obuf[50];
