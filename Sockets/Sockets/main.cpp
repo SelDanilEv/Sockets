@@ -3,37 +3,44 @@
 int main()
 {
     SocketUtil::StaticInit();
-    TCPSocketPtr serverSocket = SocketUtil::CreateTCPSocket(SocketAddressFamily::INET);
+    //TCPSocketPtr serverSocket = SocketUtil::CreateTCPSocket(SocketAddressFamily::INET);
 
-    SOCKADDR_IN addr;
-    SocketAddressPtr servAddr = IPAddressFactory::CreateIPv4FromString("127.0.0.1:2000");
+    //SOCKADDR_IN addr;
+    SocketAddressPtr servAddr = IPAddressFactory::CreateIPv4FromString("192.168.43.112:2000");
 
     SocketAddress* inAddress = new SocketAddress(servAddr->mSockAddr);
 
-    serverSocket->Bind(*inAddress);
+    //serverSocket->Bind(*inAddress);
 
-    serverSocket->Listen(1);
+    //serverSocket->Listen(1);
 
-    serverSocket->Accept(*inAddress);
+    //serverSocket->Accept(*inAddress);
 
-    char sibuf[50],
-        sobuf[50] = "sever: �������";
+    //char sibuf[50],
+    //    sobuf[50] = "sever: hello";
 
-    serverSocket->Receive(sibuf, sizeof(sibuf));
+/*    serverSocket->Receive(sibuf, sizeof(sibuf));
     std::cout << sibuf;
-    serverSocket->Send(sobuf, sizeof(sobuf));
+    serverSocket->Send(sobuf, sizeof(sobuf))*/;
 
     //client
     TCPSocketPtr clientSocket = SocketUtil::CreateTCPSocket(SocketAddressFamily::INET);
-    
+
     clientSocket->Connect(*inAddress);
 
-    char obuf[50];
-    char ibuf[50] = "Hello";
+    int i = 0;
 
-    clientSocket->Send(obuf, sizeof(obuf));
-    clientSocket->Receive(ibuf, sizeof(ibuf));
-    std::cout << ibuf;
+    while (i != 9) {
 
-    system("pause");
+        char obuf[50];
+        char ibuf[50];
+
+        _itoa_s(++i, obuf, 10);
+
+        clientSocket->Send(obuf, strlen(obuf) + 1);
+        clientSocket->Receive(ibuf, strlen(ibuf) + 1);
+        std::cout << std::endl << ibuf << std::endl;
+    }
+
+    SocketUtil::CleanUp();
 }
