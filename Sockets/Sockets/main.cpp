@@ -16,7 +16,17 @@ int main()
 
     serverSocket->Accept(*inAddress);
 
+    //client
+    TCPSocketPtr clientSocket = SocketUtil::CreateTCPSocket(SocketAddressFamily::INET);
 
-    //TCPSocket::Bind()
+    clientSocket->Connect(*inAddress);
 
+    char obuf[50];
+    char ibuf[50] = "Hello";
+
+    clientSocket->Send(obuf, sizeof(obuf));
+    clientSocket->Receive(ibuf, sizeof(ibuf));
+    std::cout << ibuf;
+
+    system("pause");
 }
