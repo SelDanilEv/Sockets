@@ -21,6 +21,7 @@
 *.smod
 
 .vs/
+Debug/
 
 # Compiled Static libraries
 *.lai
