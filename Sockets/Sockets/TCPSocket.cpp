@@ -1,22 +1,34 @@
-﻿#include "TCPSocket.h"
-#include "Shared.h"
+﻿#include "Shared.h"
 
 int TCPSocket::Connect(const SocketAddress& inAddress)
 {
     int err = connect(mSocket, &inAddress.mSockAddr, inAddress.GetSize());
     if (err < 0)
     {
-        SocketUtil::ReportError(L"TCPSocket::Connect");
+        //SocketUtil::ReportError("TCPSocket::Connect");
         return -SocketUtil::GetLastError();
     }
     return NO_ERROR;
 }
+
+int TCPSocket::Bind(const SocketAddress& inBindAddress)
+{
+    int error = bind(mSocket, &inBindAddress.mSockAddr, inBindAddress.GetSize());
+    if (error != 0)
+    {
+        //SocketUtil::ReportError("TCPSocket::Bind");
+        return SocketUtil::GetLastError();
+    }
+
+    return NO_ERROR;
+}
+
 int TCPSocket::Listen(int inBackLog)
 {
     int err = listen(mSocket, inBackLog);
     if (err < 0)
     {
-        SocketUtil::ReportError(L"TCPSocket::Listen");
+        //SocketUtil::ReportError("TCPSocket::Listen");
         return -SocketUtil::GetLastError();
     }
     // ???Сокеты TCP  105
@@ -32,7 +44,7 @@ TCPSocketPtr TCPSocket::Accept(SocketAddress& inFromAddress)
     }
     else
     {
-        SocketUtil::ReportError(L"TCPSocket::Accept");
+        //SocketUtil::ReportError("TCPSocket::Accept");
         return nullptr;
     }
 }
@@ -43,7 +55,7 @@ int TCPSocket::Send(const void* inData, int inLen)
         inLen, 0);
     if (bytesSentCount < 0)
     {
-        SocketUtil::ReportError(L"TCPSocket::Send");
+        //SocketUtil::ReportError("TCPSocket::Send");
         return -SocketUtil::GetLastError();
     }
     return bytesSentCount;
@@ -54,7 +66,7 @@ int TCPSocket::Receive(void* inData, int inLen)
         static_cast<char*>(inData), inLen, 0);
     if (bytesReceivedCount < 0)
     {
-        SocketUtil::ReportError(L"TCPSocket::Receive");
+        //SocketUtil::ReportError("TCPSocket::Receive");
         return -SocketUtil::GetLastError();
     }
     return bytesReceivedCount;
