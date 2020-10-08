@@ -1,7 +1,7 @@
 class TCPSocket
 {
 public:
-    //~TCPSocket();
+    ~TCPSocket();
     int Connect(const SocketAddress& inAddress);
     int Bind(const SocketAddress& inToAddress);
     int Listen(int inBackLog = 32);

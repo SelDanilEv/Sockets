@@ -13,12 +13,11 @@ int main()
 
     int i = 0;
 
-    while (i != 5) {
-
+    while (++i != 5) {
         char obuf[50];
         char ibuf[50];
 
-        _itoa_s(++i, obuf, 10);
+        std::cin >> obuf;
 
         clientSocket->Send(obuf, strlen(obuf) + 1);
         clientSocket->Receive(ibuf, strlen(ibuf) + 1);

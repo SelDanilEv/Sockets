@@ -71,3 +71,8 @@ int TCPSocket::Receive(void* inData, int inLen)
     }
     return bytesReceivedCount;
 }
+
+TCPSocket::~TCPSocket()
+{
+    closesocket(mSocket);
+}
