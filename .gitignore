@@ -20,6 +20,7 @@
 *.mod
 *.smod
 
+x64/
 .vs/
 Debug/
 
