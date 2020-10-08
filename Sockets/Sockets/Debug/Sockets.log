@@ -1,9 +1,0 @@
-﻿  IPAddressFactory.cpp
-  SocketAddress.cpp
-  SocketUtil.cpp
-  TCPSocket.cpp
-  UDPSocket.cpp
-  main.cpp
-  Создание кода...
-  LINK : не найден или не выполнена сборка D:\ToParse\Danil\university\ПБСП\Games\OurTryes\Sockets\Debug\Sockets.exe при последней инкрементной компоновке; выполняется полная компоновка
-  Sockets.vcxproj -> D:\ToParse\Danil\university\ПБСП\Games\OurTryes\Sockets\Debug\Sockets.exe
