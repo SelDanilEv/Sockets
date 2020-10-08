@@ -13,7 +13,7 @@ int main()
 
     int i = 0;
 
-    while (i != 9) {
+    while (i != 5) {
 
         char obuf[50];
         char ibuf[50];
