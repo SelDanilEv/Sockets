@@ -1,5 +1,3 @@
-#include "Shared.h"
-
 class SocketAddress
 {
 public:
@@ -23,4 +21,4 @@ private:
     }
 };
 
-typedef std::shared_ptr<SocketAddress> SocketAddressPtr;
+typedef shared_ptr<SocketAddress> SocketAddressPtr;
