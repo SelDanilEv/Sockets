@@ -21,31 +21,13 @@ int main()
         char sibuf[50],
             sobuf[50];
 
-        //_itoa_s(i, sobuf, 10);
-
-        sockPtr->Receive(sibuf, strlen(sibuf) + 1);
-        std::cout << "Output: " << sibuf << std::endl;
-        sockPtr->Send(sibuf, strlen(sibuf) + 1);
-
-        int t = 0;
-        std::cin >> t;
-        if (t == 1)
+        int status = sockPtr->Receive(sibuf, strlen(sibuf) + 1);
+        if (status < 0) 
         {
             sockPtr = serverSocket->Accept(*inAddress);
         }
+        std::cout << "Output: " << sibuf << std::endl;
+        strcat_s(sibuf, " echo");
+        sockPtr->Send(sibuf , strlen(sibuf) + 1);
     }
-
-
-    ////client
-    //TCPSocketPtr clientSocket = SocketUtil::CreateTCPSocket(SocketAddressFamily::INET);
-    //
-    //clientSocket->Connect(*inAddress);
-
-    //char obuf[50] = "Hello";;
-    //char ibuf[50];
-
-    //clientSocket->Send(obuf, sizeof(obuf));
-    //clientSocket->Receive(ibuf, sizeof(ibuf));
-    //std::cout << ibuf;
-
 }

@@ -1,5 +1,10 @@
 ﻿#include "Shared.h"
 
+TCPSocket::~TCPSocket()
+{
+    closesocket(mSocket);
+}
+
 int TCPSocket::Connect(const SocketAddress& inAddress)
 {
     int err = connect(mSocket, &inAddress.mSockAddr, inAddress.GetSize());
@@ -62,6 +67,7 @@ int TCPSocket::Send(const void* inData, int inLen)
 }
 int TCPSocket::Receive(void* inData, int inLen)
 {
+    memset(inData, '\0', sizeof inData);
     int bytesReceivedCount = recv(mSocket,
         static_cast<char*>(inData), inLen, 0);
     if (bytesReceivedCount < 0)
