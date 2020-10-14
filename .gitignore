@@ -20,8 +20,8 @@
 *.mod
 *.smod
 
-.vs/
-Debug/
+.vs
+Debug
 
 # Compiled Static libraries
 *.lai
