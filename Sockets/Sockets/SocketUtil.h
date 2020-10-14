@@ -20,8 +20,8 @@ public:
 		const vector< TCPSocketPtr >* inExceptSet,
 		vector< TCPSocketPtr >* outExceptSet);
 
-	//static UDPSocketPtr	CreateUDPSocket(SocketAddressFamily inFamily);
-	static TCPSocketPtr	CreateTCPSocket(SocketAddressFamily inFamily);
+	static UDPSocketPtr	CreateUDPSocket(SocketAddressFamily inFamily);
+	//static TCPSocketPtr	CreateTCPSocket(SocketAddressFamily inFamily);
 
 private:
 

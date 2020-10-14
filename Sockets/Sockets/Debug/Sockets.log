@@ -1,2 +1,9 @@
-﻿  main.cpp
-  Sockets.vcxproj -> D:\ToParse\Danil\university\ПБСП\Games\OurTryes\Sockets\Debug\Sockets.exe
+﻿  IPAddressFactory.cpp
+  main_udp_client.cpp
+  SocketAddress.cpp
+  SocketUtil.cpp
+  TCPSocket.cpp
+  UDPSocket.cpp
+  Generating Code...
+  LINK : D:\Danil\university\ПБСП\Games\OurTryes\Sockets\Debug\Sockets.exe not found or not built by the last incremental link; performing full link
+  Sockets.vcxproj -> D:\Danil\university\ПБСП\Games\OurTryes\Sockets\Debug\Sockets.exe
