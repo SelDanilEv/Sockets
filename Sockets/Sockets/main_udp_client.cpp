@@ -9,16 +9,18 @@ int main()
 
     UDPSocketPtr clientSocket = SocketUtil::CreateUDPSocket(SocketAddressFamily::INET);
 
-    int i = 0;
+    int i = 1;
 
-    while (++i != 1000) {
+    while (++i != 10000) {
         char ibuf[50];
+        std::string obuf;
 
-        char const *obuf = std::to_string(i).c_str();
+        obuf = std::to_string(i);
+        obuf += "\0";
 
-        clientSocket->SendTo(obuf, strlen(obuf),*inAddress);
-        clientSocket->ReceiveFrom(ibuf, strlen(ibuf) + 1,*inAddress);
-        std::cout << std::endl << ibuf << std::endl;
+        clientSocket->SendTo(obuf.c_str(), strlen(obuf.c_str())+1,*inAddress);
+        //clientSocket->ReceiveFrom(ibuf, strlen(ibuf) + 1,*inAddress);
+        //std::cout << std::endl << ibuf << std::endl;
     }
 
     SocketUtil::CleanUp();
