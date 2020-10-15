@@ -70,20 +70,20 @@ UDPSocketPtr SocketUtil::CreateUDPSocket(SocketAddressFamily inFamily)
 	}
 }
 
-//TCPSocketPtr SocketUtil::CreateTCPSocket(SocketAddressFamily inFamily)
-//{
-//	SOCKET s = socket(inFamily, SOCK_STREAM, IPPROTO_TCP);
-//
-//	if (s != INVALID_SOCKET)
-//	{
-//		return TCPSocketPtr(new TCPSocket(s));
-//	}
-//	else
-//	{
-//		//ReportError("SocketUtil::CreateTCPSocket");
-//		return nullptr;
-//	}
-//}
+TCPSocketPtr SocketUtil::CreateTCPSocket(SocketAddressFamily inFamily)
+{
+	SOCKET s = socket(inFamily, SOCK_STREAM, IPPROTO_TCP);
+
+	if (s != INVALID_SOCKET)
+	{
+		return TCPSocketPtr(new TCPSocket(s));
+	}
+	else
+	{
+		//ReportError("SocketUtil::CreateTCPSocket");
+		return nullptr;
+	}
+}
 
 fd_set* SocketUtil::FillSetFromVector(fd_set& outSet, const vector< TCPSocketPtr >* inSockets, int& ioNaxNfds)
 {
