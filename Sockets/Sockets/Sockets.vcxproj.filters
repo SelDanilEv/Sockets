@@ -47,10 +47,10 @@
     <ClCompile Include="UDPSocket.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="main.cpp">
+    <ClCompile Include="IPAddressFactory.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="IPAddressFactory.cpp">
+    <ClCompile Include="main_udp_client.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>

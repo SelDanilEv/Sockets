@@ -55,35 +55,35 @@ int SocketUtil::GetLastError()
 
 }
 
-//UDPSocketPtr SocketUtil::CreateUDPSocket(SocketAddressFamily inFamily)
-//{
-//	SOCKET s = socket(inFamily, SOCK_DGRAM, IPPROTO_UDP);
-//
-//	if (s != INVALID_SOCKET)
-//	{
-//		return UDPSocketPtr(new UDPSocket(s));
-//	}
-//	else
-//	{
-//		//ReportError("SocketUtil::CreateUDPSocket");
-//		return nullptr;
-//	}
-//}
-
-TCPSocketPtr SocketUtil::CreateTCPSocket(SocketAddressFamily inFamily)
+UDPSocketPtr SocketUtil::CreateUDPSocket(SocketAddressFamily inFamily)
 {
-	SOCKET s = socket(inFamily, SOCK_STREAM, IPPROTO_TCP);
+	SOCKET s = socket(inFamily, SOCK_DGRAM, IPPROTO_UDP);
 
 	if (s != INVALID_SOCKET)
 	{
-		return TCPSocketPtr(new TCPSocket(s));
+		return UDPSocketPtr(new UDPSocket(s));
 	}
 	else
 	{
-		//ReportError("SocketUtil::CreateTCPSocket");
+		//ReportError("SocketUtil::CreateUDPSocket");
 		return nullptr;
 	}
 }
+
+//TCPSocketPtr SocketUtil::CreateTCPSocket(SocketAddressFamily inFamily)
+//{
+//	SOCKET s = socket(inFamily, SOCK_STREAM, IPPROTO_TCP);
+//
+//	if (s != INVALID_SOCKET)
+//	{
+//		return TCPSocketPtr(new TCPSocket(s));
+//	}
+//	else
+//	{
+//		//ReportError("SocketUtil::CreateTCPSocket");
+//		return nullptr;
+//	}
+//}
 
 fd_set* SocketUtil::FillSetFromVector(fd_set& outSet, const vector< TCPSocketPtr >* inSockets, int& ioNaxNfds)
 {
