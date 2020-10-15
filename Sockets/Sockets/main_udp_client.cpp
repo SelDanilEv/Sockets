@@ -8,6 +8,7 @@ int main()
     SocketAddress* inAddress = new SocketAddress(servAddr->mSockAddr);
 
     UDPSocketPtr clientSocket = SocketUtil::CreateUDPSocket(SocketAddressFamily::INET);
+    UDPSocketPtr clientSocket2 = SocketUtil::CreateUDPSocket(SocketAddressFamily::INET);
 
     while (true) {
         std::string status = "";
@@ -22,6 +23,7 @@ int main()
             obuf += "\0";
 
             clientSocket->SendTo(obuf.c_str(), strlen(obuf.c_str()) + 1, *inAddress);
+            clientSocket2->SendTo(obuf.c_str(), strlen(obuf.c_str()) + 1, *inAddress);
             //clientSocket->ReceiveFrom(ibuf, strlen(ibuf) + 1,*inAddress);
             //std::cout << std::endl << ibuf << std::endl;
         }
