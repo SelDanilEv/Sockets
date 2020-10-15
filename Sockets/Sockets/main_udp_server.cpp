@@ -6,7 +6,7 @@ int main()
     UDPSocketPtr serverSocket = SocketUtil::CreateUDPSocket(SocketAddressFamily::INET);
 
     SOCKADDR_IN addr;
-    SocketAddressPtr servAddr = IPAddressFactory::CreateIPv4FromString("192.168.43.112:2000");
+    SocketAddressPtr servAddr = IPAddressFactory::CreateIPv4FromString("192.168.1.113:2000");
 
     SocketAddress* inAddress = new SocketAddress(servAddr->mSockAddr);
 
@@ -28,10 +28,13 @@ int main()
         if (status < 0)
         {
             std::cout << status << std::endl;
-            i = 0;
+            //i = 0;
         }
-        std::cout << ++i << "Output: " << sibuf << std::endl;
-        strcat_s(sibuf, " echo");
+        else
+        {
+            std::cout << ++i << " - output: " << sibuf << std::endl;
+        }
+        //strcat_s(sibuf, " echo");
         serverSocket->SendTo(sibuf, strlen(sibuf) + 1, *inAddress);
     }
 }
