@@ -12,9 +12,15 @@ void TCPServer::DoTCPLoop()
 {
     const int GOOD_SEGMENT_SIZE = 5000;
 
-    TCPSocketPtr listenSocket = SocketUtil::CreateTCPSocket(INET);
-    SocketAddress receivingAddres(INADDR_ANY, 48000);
-    if (listenSocket->Bind(receivingAddres) != NO_ERROR)
+    SocketUtil::StaticInit();
+
+    TCPSocketPtr listenSocket = SocketUtil::CreateTCPSocket(SocketAddressFamily::INET);
+
+    SocketAddressPtr servAddr = IPAddressFactory::CreateIPv4FromString("192.168.1.113:2000");
+
+    SocketAddress* inAddress = new SocketAddress(servAddr->mSockAddr);
+
+    if (listenSocket->Bind(*inAddress) != NO_ERROR)
     {
         return;
     }
