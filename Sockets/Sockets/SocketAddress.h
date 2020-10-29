@@ -11,6 +11,7 @@ public:
     {
         memcpy(&mSockAddr, &inSockAddr, sizeof(sockaddr));
     }
+    SocketAddress(){}
     size_t GetSize() const { return sizeof(sockaddr); }
     // Was private
     sockaddr mSockAddr;

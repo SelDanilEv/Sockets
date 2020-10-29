@@ -140,9 +140,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="IPAddressFactory.cpp" />
-    <ClCompile Include="main_udp_client.cpp" />
+    <ClCompile Include="main_tcp_server.cpp" />
     <ClCompile Include="SocketAddress.cpp" />
     <ClCompile Include="SocketUtil.cpp" />
+    <ClCompile Include="TCPServer.cpp" />
     <ClCompile Include="TCPSocket.cpp" />
     <ClCompile Include="UDPSocket.cpp" />
   </ItemGroup>
@@ -151,6 +152,7 @@
     <ClInclude Include="Shared.h" />
     <ClInclude Include="SocketAddress.h" />
     <ClInclude Include="SocketUtil.h" />
+    <ClInclude Include="TCPServer.h" />
     <ClInclude Include="TCPSocket.h" />
     <ClInclude Include="UDPSocket.h" />
   </ItemGroup>

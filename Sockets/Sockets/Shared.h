@@ -20,5 +20,6 @@ using std::shared_ptr;
 #include "TCPSocket.h"
 #include "SocketUtil.h"
 #include "IPAddressFactory.h"
+#include "TCPServer.h"
 
 #pragma comment(lib,"WS2_32")
