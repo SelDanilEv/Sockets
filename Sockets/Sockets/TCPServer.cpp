@@ -1,4 +1,5 @@
 #include "Shared.h"
+#include <cstdlib>
 
 TCPServer::TCPServer()
 {
@@ -25,6 +26,7 @@ void TCPServer::DoTCPLoop()
         return;
     }
     vector<TCPSocketPtr> readBlockSockets;
+    listenSocket->Listen(32);
     readBlockSockets.push_back(listenSocket);
     vector<TCPSocketPtr> readableSockets;
     while (gIsGameRunning)
@@ -63,22 +65,19 @@ void TCPServer::DoTCPLoop()
 
 void TCPServer::ProcessNewClient(TCPSocketPtr socket, SocketAddress address)
 {
-    std::cout << "New client: " << address.mSockAddr.sa_data << std::endl;
+    std::cout << "New client" << std::endl;
 }
 
 void TCPServer::ProcessDataFromClient(TCPSocketPtr socket, char* data, int dataLen)
 {
+    string tmp = std::to_string((int)socket->mSocket);
+    char const* ptmp = tmp.c_str();
+    size_t newStrLen = dataLen + strlen(ptmp) + strlen(" - ") + 1;
+
+    strcat_s(data, newStrLen, " - ");
+    strcat_s(data, newStrLen, ptmp);
+
     std::cout << "Output: " << data << std::endl;
-    const char* strToAdd = " echo";
-
-    size_t newStrLen = dataLen + strlen(strToAdd) + 1;
-
-    char* s = (char*)malloc(newStrLen);
-
-    strcpy_s(s, newStrLen, data);
-    strcat_s(s, newStrLen, strToAdd);
 
     socket->Send(data, strlen(data) + 1);
-
-    free(s);
 }

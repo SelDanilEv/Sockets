@@ -8,10 +8,11 @@ public:
     std::shared_ptr<TCPSocket> Accept(SocketAddress& inFromAddress);
     int Send(const void* inData, int inLen);
     int Receive(void* inBuffer, int inLen);
+    // Was private
+    SOCKET mSocket;
 private:
     friend class SocketUtil;
     TCPSocket(SOCKET inSocket) : mSocket(inSocket) {}
-    SOCKET mSocket;
 };
 
 typedef shared_ptr<TCPSocket> TCPSocketPtr;
