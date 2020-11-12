@@ -6,7 +6,7 @@ void OutputMemoryStream::Write(const void* inData, size_t inByteCount)
 
 	if (resultHead > mCapacity)
 	{
-		ReallocBuffer(std::max(mCapacity * 2, resultHead));
+		ReallocBuffer((std::max)(mCapacity * 2, resultHead));
 	}
 
 	std::memcpy(mBuffer + mHead, inData, inByteCount);

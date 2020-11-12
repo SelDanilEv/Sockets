@@ -9,7 +9,7 @@
 #define STREAM_ENDIANNESS 0
 #define PLATFORM_ENDIANNESS 0
 
-#pragma comment(lib,"MemoryStream.lib")
+//#pragma comment(lib,"MemoryStream.lib")
 
 constexpr uint32_t kMaxPacketSize = 1470;
 constexpr float FLOAT_EPSILON = 1.e-3F;
