@@ -35,13 +35,10 @@ void TCPServer::DoTCPLoop()
             nullptr, nullptr,
             nullptr, nullptr))
         {
-            // получен пакет — обойти сокеты...
             for (const TCPSocketPtr& socket : readableSockets)
             {
                 if (socket == listenSocket)
                 {
-                    // это сокет, принимающий запросы на соединение,
-                    // принять новое соединение
                     SocketAddress newClientAddress;
                     auto newSocket = listenSocket->Accept(newClientAddress);
                     readBlockSockets.push_back(newSocket);
@@ -70,14 +67,19 @@ void TCPServer::ProcessNewClient(TCPSocketPtr socket, SocketAddress address)
 
 void TCPServer::ProcessDataFromClient(TCPSocketPtr socket, char* data, int dataLen)
 {
-    string tmp = std::to_string((int)socket->mSocket);
-    char const* ptmp = tmp.c_str();
-    size_t newStrLen = dataLen + strlen(ptmp) + strlen(" - ") + 1;
+    TestClass* test = new TestClass();
 
-    strcat_s(data, newStrLen, " - ");
-    strcat_s(data, newStrLen, ptmp);
+    ReceiveTestClass(socket, test);
+
+
+    //string tmp = std::to_string((int)socket->mSocket);
+    //char const* ptmp = tmp.c_str();
+    //size_t newStrLen = dataLen + strlen(ptmp) + strlen(" - ") + 1;
+
+    //strcat_s(data, newStrLen, " - ");
+    //strcat_s(data, newStrLen, ptmp);
 
     std::cout << "Output: " << data << std::endl;
 
-    socket->Send(data, strlen(data) + 1);
+    //socket->Send(data, strlen(data) + 1);
 }

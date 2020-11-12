@@ -42,5 +42,5 @@ private:
 	string mName;
 };
 
-void SendTestClass(void* inSocket, const TestClass* inTest);
-void ReceiveTestClass(void* inSocket, TestClass* outTest);
+void SendTestClass(TCPSocketPtr inSocket, const TestClass* inTest);
+void ReceiveTestClass(TCPSocketPtr inSocket, TestClass* outTest);
