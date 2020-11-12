@@ -75,6 +75,9 @@
     <ClInclude Include="..\Serialization\OutputMemoryStream.h">
       <Filter>Файлы заголовков\Serialization</Filter>
     </ClInclude>
+    <ClInclude Include="..\Serialization\MemoryStream.h">
+      <Filter>Файлы заголовков\Serialization</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main_tcp_server.cpp">

@@ -1,5 +1,6 @@
 #pragma once
 #include <DirectXMath.h>
+#include "../Sockets/Shared.h"
 #include <string>
 #include <vector>
 #include <memory>

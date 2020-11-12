@@ -9,6 +9,7 @@ public:
     int Send(const void* inData, int inLen);
     int Receive(void* inBuffer, int inLen);
     // Was private
+    SOCKET getSocket() const { return mSocket; }
     SOCKET mSocket;
 private:
     friend class SocketUtil;
