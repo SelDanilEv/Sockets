@@ -3,13 +3,13 @@
 int main()
 {
     SocketUtil::StaticInit();
-    SocketAddressPtr servAddr = IPAddressFactory::CreateIPv4FromString("192.168.43.112:2000");
+    SocketAddressPtr servAddr = IPAddressFactory::CreateIPv4FromString("192.168.1.113:2000");
 
     SocketAddress* inAddress = new SocketAddress(servAddr->mSockAddr);
 
     TCPSocketPtr clientSocket = SocketUtil::CreateTCPSocket(SocketAddressFamily::INET);
 
-    clientSocket->Connect(*inAddress);
+    int ooo = clientSocket->Connect(*inAddress);
 
     int i = 0;
 
