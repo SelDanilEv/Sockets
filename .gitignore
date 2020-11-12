@@ -21,7 +21,6 @@
 *.smod
 
 x64/
-.vs/
 Debug/
 
 # Compiled Static libraries

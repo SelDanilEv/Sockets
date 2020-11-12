@@ -139,6 +139,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\Serialization\InputMemoryBitStream.cpp" />
+    <ClCompile Include="..\Serialization\InputMemoryStream.cpp" />
+    <ClCompile Include="..\Serialization\OutputMemoryBitStream.cpp" />
+    <ClCompile Include="..\Serialization\OutputMemoryStream.cpp" />
+    <ClCompile Include="..\Serialization\TestClass.cpp" />
     <ClCompile Include="IPAddressFactory.cpp" />
     <ClCompile Include="main_tcp_server.cpp" />
     <ClCompile Include="SocketAddress.cpp" />
@@ -148,6 +153,15 @@
     <ClCompile Include="UDPSocket.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\Serialization\ByteSwap.h" />
+    <ClInclude Include="..\Serialization\InputMemoryBitStream.h" />
+    <ClInclude Include="..\Serialization\InputMemoryStream.h" />
+    <ClInclude Include="..\Serialization\MemberVariable.h" />
+    <ClInclude Include="..\Serialization\MemoryPCH.h" />
+    <ClInclude Include="..\Serialization\MemoryShared.h" />
+    <ClInclude Include="..\Serialization\OutputMemoryBitStream.h" />
+    <ClInclude Include="..\Serialization\OutputMemoryStream.h" />
+    <ClInclude Include="..\Serialization\TestClass.h" />
     <ClInclude Include="IPAddressFactory.h" />
     <ClInclude Include="Shared.h" />
     <ClInclude Include="SocketAddress.h" />
