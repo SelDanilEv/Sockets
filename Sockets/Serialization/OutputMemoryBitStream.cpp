@@ -6,7 +6,7 @@ void OutputMemoryBitStream::WriteBits(uint8_t inData, uint32_t inBitCount)
 
 	if (nextBitHead > mBitCapacity)
 	{
-		ReallocBuffer(std::max(mBitCapacity * 2, nextBitHead));
+		ReallocBuffer((std::max)(mBitCapacity * 2, nextBitHead));
 	}
 
 	uint32_t byteOffset = mBitHead >> 3;
