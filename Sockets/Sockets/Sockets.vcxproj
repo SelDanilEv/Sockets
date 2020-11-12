@@ -159,6 +159,7 @@
     <ClInclude Include="..\Serialization\MemberVariable.h" />
     <ClInclude Include="..\Serialization\MemoryPCH.h" />
     <ClInclude Include="..\Serialization\MemoryShared.h" />
+    <ClInclude Include="..\Serialization\MemoryStream.h" />
     <ClInclude Include="..\Serialization\OutputMemoryBitStream.h" />
     <ClInclude Include="..\Serialization\OutputMemoryStream.h" />
     <ClInclude Include="..\Serialization\TestClass.h" />
