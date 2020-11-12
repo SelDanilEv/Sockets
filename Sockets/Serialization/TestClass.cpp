@@ -1,4 +1,4 @@
-#include "MemoryPCH.h"
+#include "../Sockets/Shared.h"
 
 void TestClass::Write(OutputMemoryStream& inStream) const
 {

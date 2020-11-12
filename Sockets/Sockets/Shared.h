@@ -5,6 +5,8 @@
 #include <Ws2tcpip.h>
 #include <iostream>
 
+#include "../Serialization/MemoryShared.h"
+
 #include "memory"
 
 #include "vector"
@@ -23,3 +25,4 @@ using std::shared_ptr;
 #include "TCPServer.h"
 
 #pragma comment(lib,"WS2_32")
+
