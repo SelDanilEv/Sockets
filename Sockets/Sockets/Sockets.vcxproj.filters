@@ -13,51 +13,57 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Исходные файлы\Sockets">
+      <UniqueIdentifier>{1c136bb2-5d36-4f6f-8b01-6903fb8da849}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Sockets">
+      <UniqueIdentifier>{7e032379-ef55-495a-a2e0-5f81d9146877}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="TCPSocket.h">
-      <Filter>Файлы заголовков</Filter>
+    <ClInclude Include="IPAddressFactory.h">
+      <Filter>Файлы заголовков\Sockets</Filter>
     </ClInclude>
     <ClInclude Include="Shared.h">
-      <Filter>Файлы заголовков</Filter>
+      <Filter>Файлы заголовков\Sockets</Filter>
     </ClInclude>
     <ClInclude Include="SocketAddress.h">
-      <Filter>Файлы заголовков</Filter>
+      <Filter>Файлы заголовков\Sockets</Filter>
     </ClInclude>
     <ClInclude Include="SocketUtil.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="UDPSocket.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="IPAddressFactory.h">
-      <Filter>Файлы заголовков</Filter>
+      <Filter>Файлы заголовков\Sockets</Filter>
     </ClInclude>
     <ClInclude Include="TCPServer.h">
-      <Filter>Файлы заголовков</Filter>
+      <Filter>Файлы заголовков\Sockets</Filter>
+    </ClInclude>
+    <ClInclude Include="TCPSocket.h">
+      <Filter>Файлы заголовков\Sockets</Filter>
+    </ClInclude>
+    <ClInclude Include="UDPSocket.h">
+      <Filter>Файлы заголовков\Sockets</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="TCPSocket.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="SocketUtil.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="SocketAddress.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="UDPSocket.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="IPAddressFactory.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
     <ClCompile Include="main_tcp_server.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="IPAddressFactory.cpp">
+      <Filter>Исходные файлы\Sockets</Filter>
+    </ClCompile>
+    <ClCompile Include="SocketAddress.cpp">
+      <Filter>Исходные файлы\Sockets</Filter>
+    </ClCompile>
+    <ClCompile Include="SocketUtil.cpp">
+      <Filter>Исходные файлы\Sockets</Filter>
+    </ClCompile>
     <ClCompile Include="TCPServer.cpp">
-      <Filter>Исходные файлы</Filter>
+      <Filter>Исходные файлы\Sockets</Filter>
+    </ClCompile>
+    <ClCompile Include="TCPSocket.cpp">
+      <Filter>Исходные файлы\Sockets</Filter>
+    </ClCompile>
+    <ClCompile Include="UDPSocket.cpp">
+      <Filter>Исходные файлы\Sockets</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
