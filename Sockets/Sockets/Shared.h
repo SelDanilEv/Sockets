@@ -1,14 +1,14 @@
 #include "stdint.h"
 #define WIN32_LEAN_AND_MEAN
 #include "Windows.h"
+#include <algorithm>
 #include <WinSock2.h>
 #include <Ws2tcpip.h>
-#include <iostream>
 
 #include <string>
 #include <vector>
 #include <memory>
-
+#include <iostream>
 
 using std::vector;
 using std::string;
