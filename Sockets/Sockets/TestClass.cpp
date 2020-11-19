@@ -14,11 +14,14 @@ void TestClass::Read(InputMemoryStream& inStream)
 	inStream.Read(mName);
 }
 
-void SendTestClass(TCPSocketPtr inSocket, const TestClass* inTest)
+void SendTestClass(TCPSocketPtr inSocket, TestClass* inTest)
 {
 	OutputMemoryStream stream;
 	inTest->Write(stream);
-	send(inSocket->getSocket(), stream.GetBufferPtr(), stream.GetLength(), 0);
+	const char* buffer = stream.GetBufferPtr();
+	uint32_t sz = stream.GetLength();
+
+	inSocket->Send(buffer, stream.GetLength());
 }
 
 void ReceiveTestClass(TCPSocketPtr inSocket, TestClass* outTest)
@@ -28,7 +31,7 @@ void ReceiveTestClass(TCPSocketPtr inSocket, TestClass* outTest)
 	{
 		char* temporaryBuffer = static_cast<char*>(temp);
 
-		int receivedByteCount = recv(inSocket->getSocket(), temporaryBuffer, kMaxPacketSize, 0);
+		int receivedByteCount =  inSocket->Receive(temporaryBuffer, kMaxPacketSize);
 
 		if (receivedByteCount > 0)
 		{
