@@ -1,7 +1,7 @@
 #pragma once
 #include "MemoryStream.h"
 
-class InputMemoryStream : public MemoryStream
+class InputMemoryStream
 {
 public:
 	InputMemoryStream(char* inBuffer, uint32_t inByteCount) :
@@ -98,7 +98,7 @@ public:
 	}
 
 private:
-	virtual bool IsInput() const override { return true; };
+	bool IsInput() const { return true; };
 
 private:
 	char* mBuffer;

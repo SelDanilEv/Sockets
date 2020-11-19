@@ -1,4 +1,4 @@
-#include "../Sockets/Shared.h"
+#include "Shared.h"
 
 void TestClass::Write(OutputMemoryStream& inStream) const
 {
