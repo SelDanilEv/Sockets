@@ -17,7 +17,7 @@ void TCPServer::DoTCPLoop()
 
     TCPSocketPtr listenSocket = SocketUtil::CreateTCPSocket(SocketAddressFamily::INET);
 
-    SocketAddressPtr servAddr = IPAddressFactory::CreateIPv4FromString("192.168.1.113:2000");
+    SocketAddressPtr servAddr = IPAddressFactory::CreateIPv4FromString("127.0.0.1:2000");
 
     SocketAddress* inAddress = new SocketAddress(servAddr->mSockAddr);
 
