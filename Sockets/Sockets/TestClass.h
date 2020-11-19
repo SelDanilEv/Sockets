@@ -37,8 +37,8 @@ private:
 	}
 
 private:
-	int32_t mHealth;
-	int32_t mMeowCount;
+	uint32_t mHealth;
+	uint32_t mMeowCount;
 	string mName;
 };
 

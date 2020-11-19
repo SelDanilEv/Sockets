@@ -100,7 +100,7 @@ public:
 private:
 	bool IsInput() const { return true; };
 
-private:
+public:
 	char* mBuffer;
 	uint32_t mHead;
 	uint32_t mCapacity;
