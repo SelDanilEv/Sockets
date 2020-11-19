@@ -139,36 +139,34 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\Serialization\InputMemoryBitStream.cpp" />
-    <ClCompile Include="..\Serialization\InputMemoryStream.cpp" />
-    <ClCompile Include="..\Serialization\OutputMemoryBitStream.cpp" />
-    <ClCompile Include="..\Serialization\OutputMemoryStream.cpp" />
-    <ClCompile Include="..\Serialization\TestClass.cpp" />
+    <ClCompile Include="InputMemoryBitStream.cpp" />
+    <ClCompile Include="InputMemoryStream.cpp" />
     <ClCompile Include="IPAddressFactory.cpp" />
     <ClCompile Include="main_tcp_server.cpp" />
+    <ClCompile Include="OutputMemoryBitStream.cpp" />
+    <ClCompile Include="OutputMemoryStream.cpp" />
     <ClCompile Include="SocketAddress.cpp" />
     <ClCompile Include="SocketUtil.cpp" />
     <ClCompile Include="TCPServer.cpp" />
     <ClCompile Include="TCPSocket.cpp" />
+    <ClCompile Include="TestClass.cpp" />
     <ClCompile Include="UDPSocket.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\Serialization\ByteSwap.h" />
-    <ClInclude Include="..\Serialization\InputMemoryBitStream.h" />
-    <ClInclude Include="..\Serialization\InputMemoryStream.h" />
-    <ClInclude Include="..\Serialization\MemberVariable.h" />
-    <ClInclude Include="..\Serialization\MemoryPCH.h" />
-    <ClInclude Include="..\Serialization\MemoryShared.h" />
-    <ClInclude Include="..\Serialization\MemoryStream.h" />
-    <ClInclude Include="..\Serialization\OutputMemoryBitStream.h" />
-    <ClInclude Include="..\Serialization\OutputMemoryStream.h" />
-    <ClInclude Include="..\Serialization\TestClass.h" />
+    <ClInclude Include="ByteSwap.h" />
+    <ClInclude Include="InputMemoryBitStream.h" />
+    <ClInclude Include="InputMemoryStream.h" />
     <ClInclude Include="IPAddressFactory.h" />
+    <ClInclude Include="MemberVariable.h" />
+    <ClInclude Include="MemoryStream.h" />
+    <ClInclude Include="OutputMemoryBitStream.h" />
+    <ClInclude Include="OutputMemoryStream.h" />
     <ClInclude Include="Shared.h" />
     <ClInclude Include="SocketAddress.h" />
     <ClInclude Include="SocketUtil.h" />
     <ClInclude Include="TCPServer.h" />
     <ClInclude Include="TCPSocket.h" />
+    <ClInclude Include="TestClass.h" />
     <ClInclude Include="UDPSocket.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

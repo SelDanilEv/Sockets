@@ -48,34 +48,28 @@
     <ClInclude Include="UDPSocket.h">
       <Filter>Файлы заголовков\Sockets</Filter>
     </ClInclude>
-    <ClInclude Include="..\Serialization\TestClass.h">
+    <ClInclude Include="TestClass.h">
       <Filter>Файлы заголовков\Serialization</Filter>
     </ClInclude>
-    <ClInclude Include="..\Serialization\ByteSwap.h">
+    <ClInclude Include="OutputMemoryStream.h">
       <Filter>Файлы заголовков\Serialization</Filter>
     </ClInclude>
-    <ClInclude Include="..\Serialization\InputMemoryBitStream.h">
+    <ClInclude Include="OutputMemoryBitStream.h">
       <Filter>Файлы заголовков\Serialization</Filter>
     </ClInclude>
-    <ClInclude Include="..\Serialization\InputMemoryStream.h">
+    <ClInclude Include="MemoryStream.h">
       <Filter>Файлы заголовков\Serialization</Filter>
     </ClInclude>
-    <ClInclude Include="..\Serialization\MemberVariable.h">
+    <ClInclude Include="MemberVariable.h">
       <Filter>Файлы заголовков\Serialization</Filter>
     </ClInclude>
-    <ClInclude Include="..\Serialization\MemoryPCH.h">
+    <ClInclude Include="InputMemoryStream.h">
       <Filter>Файлы заголовков\Serialization</Filter>
     </ClInclude>
-    <ClInclude Include="..\Serialization\MemoryShared.h">
+    <ClInclude Include="InputMemoryBitStream.h">
       <Filter>Файлы заголовков\Serialization</Filter>
     </ClInclude>
-    <ClInclude Include="..\Serialization\OutputMemoryBitStream.h">
-      <Filter>Файлы заголовков\Serialization</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Serialization\OutputMemoryStream.h">
-      <Filter>Файлы заголовков\Serialization</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Serialization\MemoryStream.h">
+    <ClInclude Include="ByteSwap.h">
       <Filter>Файлы заголовков\Serialization</Filter>
     </ClInclude>
   </ItemGroup>
@@ -101,19 +95,19 @@
     <ClCompile Include="UDPSocket.cpp">
       <Filter>Исходные файлы\Sockets</Filter>
     </ClCompile>
-    <ClCompile Include="..\Serialization\TestClass.cpp">
+    <ClCompile Include="InputMemoryBitStream.cpp">
       <Filter>Исходные файлы\Serialization</Filter>
     </ClCompile>
-    <ClCompile Include="..\Serialization\InputMemoryBitStream.cpp">
+    <ClCompile Include="InputMemoryStream.cpp">
       <Filter>Исходные файлы\Serialization</Filter>
     </ClCompile>
-    <ClCompile Include="..\Serialization\InputMemoryStream.cpp">
+    <ClCompile Include="OutputMemoryBitStream.cpp">
       <Filter>Исходные файлы\Serialization</Filter>
     </ClCompile>
-    <ClCompile Include="..\Serialization\OutputMemoryBitStream.cpp">
+    <ClCompile Include="OutputMemoryStream.cpp">
       <Filter>Исходные файлы\Serialization</Filter>
     </ClCompile>
-    <ClCompile Include="..\Serialization\OutputMemoryStream.cpp">
+    <ClCompile Include="TestClass.cpp">
       <Filter>Исходные файлы\Serialization</Filter>
     </ClCompile>
   </ItemGroup>

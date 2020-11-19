@@ -1,4 +1,4 @@
-#include "MemoryPCH.h"
+#include "Shared.h"
 
 void OutputMemoryBitStream::WriteBits(uint8_t inData, uint32_t inBitCount)
 {

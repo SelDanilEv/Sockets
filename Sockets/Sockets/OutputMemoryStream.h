@@ -1,7 +1,6 @@
 #pragma once
-#include "MemoryStream.h"
 
-class OutputMemoryStream : public MemoryStream
+class OutputMemoryStream
 {
 public:
 	OutputMemoryStream() :
@@ -95,7 +94,7 @@ public:
 	}
 
 private:
-	virtual bool IsInput() const override { return false; };
+	bool IsInput() const { return false; };
 
 private:
 	void ReallocBuffer(uint32_t inNewLength);

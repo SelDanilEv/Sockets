@@ -1,4 +1,4 @@
-#include "MemoryPCH.h"
+#include "Shared.h"
 
 void InputMemoryBitStream::ReadBits(uint8_t& outData, uint32_t inBitCount)
 {
