@@ -22,6 +22,10 @@ public:
 		}
 		return sDatatype;
 	}
+
+	std::string GetName() {
+		return mName;
+	}
 private:
 	static void InitDataType(DataType** inDataType)
 	{

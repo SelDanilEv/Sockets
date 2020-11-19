@@ -82,7 +82,7 @@ void TCPServer::ProcessDataFromClient(TCPSocketPtr socket, char* data, int dataL
     //strcat_s(data, newStrLen, " - ");
     //strcat_s(data, newStrLen, ptmp);
 
-    std::cout << "Output: " << (void*)data << std::endl;
+    std::cout << "Output: " << test->GetName() << std::endl;
 
     socket->Send(data, strlen(data) + 1);
 }
