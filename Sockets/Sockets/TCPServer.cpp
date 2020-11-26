@@ -84,5 +84,5 @@ void TCPServer::ProcessDataFromClient(TCPSocketPtr socket, char* data, int dataL
 
     std::cout << "Output: " << test->GetName() << std::endl;
 
-    socket->Send(data, strlen(data) + 1);
+    //socket->Send(data, strlen(data) + 1);
 }

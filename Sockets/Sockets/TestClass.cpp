@@ -21,7 +21,7 @@ void SendTestClass(TCPSocketPtr inSocket, TestClass* inTest)
 	const char* buffer = stream.GetBufferPtr();
 	uint32_t sz = stream.GetLength();
 
-	inSocket->Send(buffer, stream.GetLength());
+	inSocket->Send(&buffer, stream.GetLength());
 }
 
 void ReceiveTestClass(TCPSocketPtr inSocket, TestClass* outTest)
